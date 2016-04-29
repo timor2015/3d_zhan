@@ -33,7 +33,7 @@ $('#car').on('touchend', function(){
 		setTimeout(function(){
 			look.timer = setInterval(function(){
 				changeImg(dir);
-			}, 100);
+			}, 300);
 			timerOff = true;
 		}, 2000);
 	}
@@ -52,7 +52,7 @@ $('#car').on('mouseup', function(){
 		setTimeout(function(){
 			look.timer = setInterval(function(){
 				changeImg(dir);
-			}, 100);
+			}, 300);
 			timerOff = true;
 		}, 2000);
 	}
