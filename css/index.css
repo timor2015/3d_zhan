@@ -1,0 +1,40 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+}
+
+.adv{
+	width: 100%;
+	height: 2.86rem;
+	background: #ccc;
+}
+
+#car{
+	width: inherit;
+	height: inherit;
+	cursor: pointer;
+}
+#car p{
+	width: inherit;
+	height: inherit;
+}
+#car p img{
+	width: inherit;
+	height: inherit;
+}
+
+
+button{
+	width: 2rem;
+	height: 0.6rem;
+}
