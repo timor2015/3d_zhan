@@ -2,30 +2,102 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=320.1, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="viewport" content="width=320.1, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no, email=no">
-	<title>3D场景</title>
+	<title>3D展示</title>
 <script type="text/javascript" src="./js/rem.js"></script>
 <link rel="stylesheet" href="./css/index.css">
+<style>
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+html, body, .look{
+	width: 100%;
+	height: 100%;
+}
+
+#car{
+	width: 100%;
+	height: 2.86rem;
+	background: #ccc;
+}
+
+#earth{
+	width: 3.2rem;
+	height: 3.6rem;
+	margin-left: 1.6rem;
+}
+
+</style>
 </head>
 <body>
 
-<div class="container">
-	<div class="adv">
-		<div id="car">
-			<p><img src="./images/1.png"></p>
-		</div>
+
+<div class="look">
+	<div id="car">
+		<p><img src="./img/1.png"></p>
 	</div>
-
-
+	<div id="earth">
+		<p><img src="./img/1.jpg"></p>
+	</div>
 </div>
 
 
-
-
 <script type="text/javascript" src="./js/jquery.js"></script>
-<script type="text/javascript" src="./js/index.js"></script>	
+<script type="text/javascript" src="./js/tm3d.js"></script>
+<script type="text/javascript">
+
+
+
+$(function(){
+
+$('#car').tm3d({
+	'ele' : $('#car'),
+	'imgLength' : 51,
+	'imgPath' : './img/',
+	'imgtype' : 'png',
+	'autoplay' : false,
+	'auto' : {
+		'dir' : 'right',
+		'imgtime' : 250,
+		'delaytime' : 2000,
+	}
+	
+});
+
+$('#earth').tm3d({
+	'ele' : $('#earth'),
+	'imgLength' : 45,
+	'imgPath' : './img/',
+	'imgtype' : 'jpg',
+	'autoplay' : true,
+	'auto' : {
+		'dir' : 'left',
+		'imgtime' : 150,
+		'delaytime' : 2000,
+	}
+	
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>	
 </body>
 </html>
