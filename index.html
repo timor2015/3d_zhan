@@ -32,6 +32,12 @@ html, body, .look{
 	margin-left: 1.6rem;
 }
 
+#earth{
+	width: 3.3rem;
+	height: 3.6rem;
+	margin-left: 1.7rem;
+}
+
 </style>
 </head>
 <body>
@@ -43,6 +49,9 @@ html, body, .look{
 	</div>
 	<div id="earth">
 		<p><img src="./img/1.jpg"></p>
+	</div>
+	<div id="earth2">
+		<p><img src="./img/earth/1.png"></p>
 	</div>
 </div>
 
@@ -74,6 +83,20 @@ $('#earth').tm3d({
 	'imgLength' : 45,
 	'imgPath' : './img/',
 	'imgtype' : 'jpg',
+	'autoplay' : true,
+	'auto' : {
+		'dir' : 'left',
+		'imgtime' : 150,
+		'delaytime' : 2000,
+	}
+	
+});
+
+$('#earth2').tm3d({
+	'ele' : $('#earth2'),
+	'imgLength' : 55,
+	'imgPath' : './img/earth/',
+	'imgtype' : 'png',
 	'autoplay' : true,
 	'auto' : {
 		'dir' : 'left',
